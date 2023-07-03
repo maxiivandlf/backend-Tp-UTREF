@@ -8,15 +8,15 @@ const Products = sequelize.define('Products', {
     autoIncrement: true,
     primaryKey: true,
   },
-  img: {
+  imagen: {
     type: DataTypes.CHAR,
     allowNull: false,
   },
-  nameProduct: {
+  nombre: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  price: {
+  importe: {
     type: DataTypes.FLOAT,
     allowNull: true,
   },
