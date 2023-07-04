@@ -37,15 +37,15 @@ npm run dev
 
 ### Crear productos
 
-| Metodo | Ruta                     | Dato                                                                         |
-| ------ | ------------------------ | ---------------------------------------------------------------------------- |
-| POST   | localhost:3003/products/ | JSON {imagen: "CHAR (EMOJI) ",nombre:"STRING",importe:"FLOAT",precio:"INT" } |
+| Metodo | Ruta                    | Dato                                                                         |
+| ------ | ----------------------- | ---------------------------------------------------------------------------- |
+| POST   | localhost:3003/products | JSON {imagen: "CHAR (EMOJI) ",nombre:"STRING",importe:"FLOAT",precio:"INT" } |
 
 ### Optener todos los productos
 
-| Metodo | Ruta                     | Dato |
-| ------ | ------------------------ | ---- |
-| GET    | localhost:3003/products/ |      |
+| Metodo | Ruta                    | Dato |
+| ------ | ----------------------- | ---- |
+| GET    | localhost:3003/products |      |
 
 ### Opterner productos por id
 
