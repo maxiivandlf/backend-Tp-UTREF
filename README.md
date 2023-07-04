@@ -16,6 +16,15 @@ git clone https://github.com/maxiivandlf/backend-Tp-UTREF.git
 npm install
 ```
 
+#### Variable de entorno
+
+Crear un archivo .env en la raiz y agrergar
+la siguiente variable de entorno:
+
+```
+SERVER_PORT= ("Nro del puerto deseado")
+```
+
 #### Levantar el server
 
 ```
