@@ -30,4 +30,4 @@
 
 | Metodo | Ruta                        | Dato |
 | ------ | --------------------------- | ---- |
-| PUT    | localhost:3003/products/:id |      |
+| DELETE | localhost:3003/products/:id |      |
