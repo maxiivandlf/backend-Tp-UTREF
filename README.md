@@ -22,9 +22,9 @@
 
 ### Actualizar un productos
 
-| Metodo | Dato                        | Dato                                                                         |
-| ------ | --------------------------- | ---------------------------------------------------------------------------- |
-| PUT    | localhost:3003/products/:id | JSON {imagen: "CHAR (EMOJI) ",nombre:"STRING",importe:"FLOAT",precio:"INT" } |
+| Metodo | Dato                        | Dato                                                                                                   |
+| ------ | --------------------------- | ------------------------------------------------------------------------------------------------------ |
+| PUT    | localhost:3003/products/:id | JSON {imagen: "CHAR (EMOJI) ",nombre:"STRING",importe:"FLOAT",precio:"INT" } (no son necesarios todos) |
 
 ### ELiminar producto
 
