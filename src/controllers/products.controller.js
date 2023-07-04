@@ -1,9 +1,12 @@
+const { productService } = require('../services');
+
 const getAllProducts = async (req, res) => {
   try {
-    res.status(200).send('ESTOS SON TODO LOS PRODUCTOS ');
+    const products = await productService.getAllProducts();
+    res.status(200).json(products);
   } catch (error) {
-    res.status(404).json({
-      event: 'Get all products',
+    res.status(500).json({
+      action: 'getAllProducts',
       message: error.message,
     });
   }
@@ -11,14 +14,64 @@ const getAllProducts = async (req, res) => {
 
 const createProduct = async (req, res) => {
   try {
-    res.status(201).json({
-      event: 'Creando producto',
-      product: req.body,
-    });
+    const product = await productService.createProduct(req.body);
+    res.status(201).json(product);
   } catch (error) {
     res.status(500).json({
-      event: 'crear producto',
-      error: error.message,
+      action: 'createProduct',
+      message: error.message,
+    });
+  }
+};
+
+const getProductById = async (req, res) => {
+  try {
+    const product = await productService.getProductById(req.params.id);
+    res.status(200).json(product);
+  } catch (error) {
+    res.status(500).json({
+      action: 'getProductById',
+      message: error.message,
+    });
+  }
+};
+
+const updateProduct = async (req, res) => {
+  try {
+    const product = await productService.updateProduct(req.params.id, req.body);
+    if (product === 1) {
+      res.status(200).json({
+        message: 'Product updated successfully',
+      });
+    } else {
+      res.status(404).json({
+        message: 'Product not found',
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      action: 'updateProduct',
+      message: error.message,
+    });
+  }
+};
+
+const deleteProduct = async (req, res) => {
+  try {
+    const product = await productService.deleteProduct(req.params.id);
+    if (product === 1) {
+      res.status(200).json({
+        message: 'Product deleted successfully',
+      });
+    } else {
+      res.status(404).json({
+        message: 'Product not found',
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      action: 'deleteProduct',
+      message: error.message,
     });
   }
 };
@@ -26,4 +79,7 @@ const createProduct = async (req, res) => {
 module.exports = {
   getAllProducts,
   createProduct,
+  getProductById,
+  updateProduct,
+  deleteProduct,
 };
