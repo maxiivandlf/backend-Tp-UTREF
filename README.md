@@ -1,6 +1,30 @@
-# backend-Tp-UTREF
+# Backend Tp UTREF
+
+## Iniciar el proyecto
+
+---
+
+#### Clonar el repositorio
+
+```
+git clone https://github.com/maxiivandlf/backend-Tp-UTREF.git
+```
+
+#### Instalar dependencias
+
+```
+npm install
+```
+
+#### Levantar el server
+
+```
+npm run dev
+```
 
 ## Lista de endpoints
+
+---
 
 ### Crear productos
 
